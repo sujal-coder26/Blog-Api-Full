@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "b6da397e-be96-4112-9521-05c7af8df584",
+		"name": "blog-apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24477355"
+	},
+	"item": [
+		{
+			"name": "uploadImage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Sujal Gautam/Downloads/bulletin-board-3127287.jpg"
+						}
+					]
+				},
+				"url": "http://localhost:8080/api/post/image/upload/3"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "getPostById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/posts/3"
+			},
+			"response": []
+		},
+		{
+			"name": "updatePost",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Programming Language\",\r\n    \"content\": \"Prgrmmaing language is the future\",\r\n    \"imageName\": \"bulletin-board-3127287.jpg\",\r\n    \"user\": {\r\n        \"id\": 1,\r\n        \"name\": \"Sulav Gautam\",\r\n        \"email\": \"sulavsharma@gmail.com\",\r\n        \"password\": \"sulavga23\",\r\n        \"about\": \"I live in USA\"\r\n    },\r\n    \"comments\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/posts/2"
+			},
+			"response": []
+		},
+		{
+			"name": "searchPost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/posts/search/program"
+			},
+			"response": []
+		},
+		{
+			"name": "createPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\" : \"Python Developing Course\",\r\n    \"title\": \"Python Developer\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/user/1/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "deletePost",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/api/posts/2"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/api/users/3"
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"about\" : \"I live in Kathamandu\",\r\n    \"email\": \"praweshgautam@gmail.com\",\r\n    \"name\": \"Prawesh Gautam\",\r\n    \"password\": \"prawesh123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/users/"
+			},
+			"response": []
+		}
+	]
+}
